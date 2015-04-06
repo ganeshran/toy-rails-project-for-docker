@@ -7,6 +7,7 @@ RUN apt-get install -qy nginx
 RUN apt-get install -qy curl
 RUN apt-get install -qy nodejs
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 
 # Install rvm, ruby, bundler
 RUN curl -sSL https://get.rvm.io | bash -s stable
